@@ -1,0 +1,176 @@
+/* line 1, ../Project-balloons/sass/style.sass */
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 5, ../Project-balloons/sass/style.sass */
+html {
+  font-size: 62.5%;
+}
+
+/* line 8, ../Project-balloons/sass/style.sass */
+body {
+  font-family: 'Roboto';
+  font-weight: 400;
+  color: #777777;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  padding: 5rem;
+  background-color: white;
+}
+
+/* line 17, ../Project-balloons/sass/style.sass */
+.container {
+  background-color: #F7F7F7;
+}
+
+/* line 21, ../Project-balloons/sass/style.sass */
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/pexels-mehmet.jpg) center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+/* line 26, ../Project-balloons/sass/style.sass */
+.header__logo {
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  height: 7rem;
+  width: 5.6rem;
+}
+
+/* line 32, ../Project-balloons/sass/style.sass */
+.header__box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+/* line 40, ../Project-balloons/sass/style.sass */
+.title-first {
+  color: #FFFFFF;
+}
+
+/* line 42, ../Project-balloons/sass/style.sass */
+.title-first__main {
+  display: block;
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 6rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  animation: lefttoright 1s ease 1s;
+  backface-visibility: hidden;
+}
+
+/* line 52, ../Project-balloons/sass/style.sass */
+.title-first__second {
+  display: block;
+  font-weight: 100;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: .5rem;
+  animation: righttoleft 1.7s ease 1s;
+  backface-visibility: hidden;
+  margin-bottom: 6.5rem;
+}
+
+/* line 63, ../Project-balloons/sass/style.sass */
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  background: white;
+  color: #777;
+  border-radius: 5rem;
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  transition: all .3s;
+  position: relative;
+  font-size: 2rem;
+}
+
+/* line 74, ../Project-balloons/sass/style.sass */
+.btn:hover {
+  transform: translateY(-0.4rem);
+}
+
+/* line 77, ../Project-balloons/sass/style.sass */
+.btn:hover::after {
+  opacity: 0;
+  transform: scaleX(1.5) scaleY(1.7);
+}
+
+/* line 80, ../Project-balloons/sass/style.sass */
+.btn:active {
+  transform: translateY(-0.2rem);
+}
+
+/* line 83, ../Project-balloons/sass/style.sass */
+.btn::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+  display: inline-block;
+  z-index: -1;
+  transition: .4s;
+}
+
+/* line 95, ../Project-balloons/sass/style.sass */
+.btn_animated {
+  animation: btntoup .5s ease-out .7s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes btntoup {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes lefttoright {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes righttoleft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

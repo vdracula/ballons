@@ -1,0 +1,131 @@
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+html
+    font-size: 62.5%
+
+body
+    font-family: 'Roboto'
+    font-weight: 400
+    color: #777777
+    font-size: 1.6rem
+    letter-spacing: 0.2rem
+    padding: 5rem
+    background-color: white
+
+.container
+    background-color: #F7F7F7     
+
+
+.header
+    position: relative
+    height: 95vh
+    background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/pexels-mehmet.jpg) center/cover no-repeat 
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+    &__logo
+        position: absolute
+        left: 5rem
+        top: 5rem
+        height: 7rem
+        width: 5.6rem
+    &__box
+        position: absolute
+        top: 40%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100%
+        text-align: center
+
+.title-first
+    color: #FFFFFF
+    &__main
+        display: block
+        font-weight: 600
+        font-size: 5rem
+        line-height: 6rem
+        letter-spacing: 1rem
+        text-transform: uppercase
+        margin-bottom: 1rem
+        animation: lefttoright 1s ease 1s 
+        backface-visibility: hidden
+    &__second
+        display: block
+        font-weight: 100
+        font-size: 4rem
+        line-height: 4.8rem
+        letter-spacing: .5rem
+        animation: righttoleft 1.7s ease 1s
+        backface-visibility: hidden
+        margin-bottom: 6.5rem
+
+.btn
+    &:link, &:visited
+        text-transform: uppercase
+        text-decoration: none
+        background: white
+        color: #777
+        border-radius: 5rem
+        display: inline-block
+        padding: 1.5rem 4rem
+        transition: all .3s
+        position: relative
+        font-size: 2rem
+    &:hover
+        transform: translateY(-.4rem)
+        box-shadow(0rem .4rem .4rem rgba(0, 0, 0, 0.3))
+        &::after
+            opacity: 0
+            transform: scaleX(1.5) scaleY(1.7)
+    &:active
+        transform: translateY(-.2rem)
+        box-shadow(0rem .4rem .4rem rgba(0, 0, 0, 0.2))
+    &::after
+        position: absolute
+        top: 0
+        left: 0
+        content: ""
+        background: white
+        width: 100%
+        height: 100%
+        border-radius: 5rem
+        display: inline-block
+        z-index: -1
+        transition: .4s
+    &_animated
+        animation: btntoup .5s ease-out .7s
+        animation-fill-mode: backwards
+
+@keyframes btntoup
+    0%
+        opacity: 0
+        transform: translateY(5rem)
+    
+    100%
+        opacity: 1
+        transform: translateY(0rem)
+
+@keyframes lefttoright
+    0%
+        opacity: 0
+        transform: translateX(-10rem)
+
+    80%    
+        transform: translateX(1rem)
+    
+    100%
+        opacity: 1
+        transform: translateX(0rem)
+
+@keyframes righttoleft
+    0%
+        opacity: 0
+        transform: translateX(10rem)
+
+    80%    
+        transform: translateX(-1rem)
+    
+    100%
+        opacity: 1
+        transform: translateX(0rem)
+ 
